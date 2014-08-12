@@ -2,7 +2,7 @@
 
 var React = require('react');
 
-var LilyApp = React.createClass({
+var NavBar = React.createClass({
   render: function() {
     return(
       <nav className="navbar navbar-default" role="navigation">
@@ -38,4 +38,4 @@ var LilyApp = React.createClass({
   }
 });
 
-module.exports = LilyApp;
+module.exports = NavBar;
