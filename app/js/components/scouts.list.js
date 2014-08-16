@@ -27,7 +27,7 @@ var ScoutsList = React.createClass({
 		var scouts = this.state.scouts.map(function(scout) {
 			return (
 				<tr  onClick={that.handleClick}>
-					<td>{scout.name}</td>
+					<td>{scout.first_name} {scout.last_name}</td>
 					<td>{scout.rank}</td>
 					<td>
 						<button className="btn">Full Detail</button>
