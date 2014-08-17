@@ -39,7 +39,7 @@ ScoutStore.dispatchToken = ScoutDispatcher.register(function(payload) {
 	var action = payload.action;
 	switch(action.actionType) {
 		case ScoutConstants.ADD_SCOUT:
-			ScoutStore.addScout(payload.action.item);
+			ScoutStore.addScout(payload.action.scout);
 			break;
 		case ScoutConstants.REMOVE_SCOUT:
 			ScoutStore.removeScout(payload.action.index);

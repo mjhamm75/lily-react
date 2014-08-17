@@ -2,10 +2,10 @@ var AppConstants = require('./../constants/constants.js');
 var ScoutDispatcher = require('./../dispatchers/scout.dispatcher.js');
 
 var ScoutActions = {
-  addScout: function(item) {
+  addScout: function(scout) {
     ScoutDispatcher.handleViewAction({
       actionType: AppConstants.ADD_SCOUT,
-      item: item
+      scout: scout
     });
   },
 
