@@ -34,7 +34,7 @@ var ScoutsList = React.createClass({
 						<button className="btn">Full Detail</button>
 					</td>
 					<td>
-						<RemoveScout />
+						<RemoveScout scoutId={scout.id}/>
 					</td>
 				</tr>
 			);
