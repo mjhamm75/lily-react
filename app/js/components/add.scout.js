@@ -4,6 +4,7 @@ var React = require('react');
 var ScoutsList = require('./scouts.list.js');
 var AddScout = require('./add.scout.js');
 var ScoutActions = require('./../actions/scout.actions.js');
+var ScoutStore = require('./../stores/scout.store.js');
 var OverlayMixin = require('react-bootstrap').OverlayMixin;
 var Modal = require('react-bootstrap').Modal;
 
