@@ -12,17 +12,13 @@ var ScoutStore = merge(EventEmitter.prototype, {
 	},
 	getScouts: function() {
 		var that = this;
-		if(scouts.length === 0) {
-			$.ajax({
-				url: 'http://localhost:9000/scouts',
-			}).success(function(data) {
-				scouts = data.scouts;
-				that.emit(CHANGE_EVENT);
-			});
-			return scouts;
-		} else {
-			return scouts;
-		}
+		$.ajax({
+			url: 'http://localhost:9000/scouts',
+		}).success(function(data) {
+			scouts = data.scouts;
+			that.emit(CHANGE_EVENT);
+		});
+		return scouts;
 	},
 	addScout: function(scout) {
 		var that = this;
