@@ -2,6 +2,7 @@
 
 var React = require('react');
 var ScoutStore = require('./../stores/scout.store.js');
+var RemoveScout = require('./remove.scout.js');
 
 function getScouts() {
   return {
@@ -32,6 +33,9 @@ var ScoutsList = React.createClass({
 					<td>
 						<button className="btn">Full Detail</button>
 					</td>
+					<td>
+						<RemoveScout />
+					</td>
 				</tr>
 			);
 		});
@@ -43,6 +47,7 @@ var ScoutsList = React.createClass({
 							<th>Name</th>
 							<th>Rank</th>
 							<th>Full Detail</th>
+							<th></th>
 						</tr>
 					</thead>
 					<tbody>
