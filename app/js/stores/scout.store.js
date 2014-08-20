@@ -12,11 +12,14 @@ var ScoutStore = merge(EventEmitter.prototype, {
 	},
 	getScouts: function() {
 		var that = this;
+		var size = scouts.length;
 		$.ajax({
 			url: 'http://localhost:9000/scouts',
 		}).success(function(data) {
 			scouts = data.scouts;
-			that.emit(CHANGE_EVENT);
+			if(size !== scouts.length) {
+				that.emit(CHANGE_EVENT);
+			}
 		});
 		return scouts;
 	},
@@ -34,8 +37,11 @@ var ScoutStore = merge(EventEmitter.prototype, {
 			}
 		});
 	},
-	removeScout: function(i) {
-
+	removeScout: function(scoutId) {
+		var that = this;
+		$.ajax({
+			type: 'PUT'
+		});
 	},
 	emitChange: function() {
 		this.emit(CHANGE_EVENT);
