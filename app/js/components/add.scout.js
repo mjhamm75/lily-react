@@ -36,6 +36,7 @@ var AddScout = React.createClass({
 	},
 	addScout: function() {
 		ScoutActions.addScout(this.state.scout);
+		this.toggleModal();
 	},
 	render: function() {
 		return ( < button onClick = { this.toggleModal} type = "button" className = "btn btn-success" >Add Scout < /button>
