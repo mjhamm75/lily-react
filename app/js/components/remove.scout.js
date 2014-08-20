@@ -9,7 +9,7 @@ var RemoveScout = React.createClass({
 		ScoutActions.removeScout(this.props.scoutId);
 	},
 	render: function() {
-		return <span onClick={this.handleClick} className="glyphicon glyphicon-remove-circle"></span>;
+		return <a><i onClick={this.handleClick} className="glyphicon glyphicon-remove-circle btn-circle"></i></a>;
 	}
 });
 
