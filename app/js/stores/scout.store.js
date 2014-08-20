@@ -40,7 +40,11 @@ var ScoutStore = merge(EventEmitter.prototype, {
 	removeScout: function(scoutId) {
 		var that = this;
 		$.ajax({
-			type: 'PUT'
+			type: 'DELETE',
+			url: 'http://localhost:9000/scouts/' + scoutId,
+			success: function() {
+				that.emit(CHANGE_EVENT);
+			}
 		});
 	},
 	emitChange: function() {
