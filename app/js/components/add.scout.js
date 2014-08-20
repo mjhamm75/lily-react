@@ -66,6 +66,10 @@ var AddScout = React.createClass({
 								<option>First Class</option>
 							</select>
 						</div>
+						<div className="form-group">
+							<label for="email">Email</label>
+							<input className="form-control" onBlur={this.makeChangeHandler('email')}></input>
+						</div>
 					</form>
 				< /div>
 				<div className="modal-footer">

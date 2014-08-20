@@ -25,7 +25,21 @@ var ScoutStore = merge(EventEmitter.prototype, {
 		}
 	},
 	addScout: function(scout) {
-		debugger;
+		var that = this;
+		var s = {
+			"first_name": "Jimi",
+			"last_name": "Hendrix",
+			"rank": "Boy Scout",
+			"email": "jimi@gmail.com"
+		};
+		$.ajax({
+			type: 'POST',
+			url: 'http://localhost:9000/scouts',
+			dataType: 'json',
+			contentType: 'application/json',
+			data: JSON.stringify(s),
+			processData: false
+		});
 	},
 	removeScout: function(i) {
 
