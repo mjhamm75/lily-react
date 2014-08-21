@@ -17,8 +17,8 @@ var ScoutsList = React.createClass({
 	componentDidMount: function() {
 		ScoutStore.addChangeListener(this.onChange);
 	},
-	handleClick: function(e) {
-		console.log("clicked");
+	handleClick: function(scoutId, e) {
+		window.location.href = window.location.href + '/' + scoutId;
 	},
 	onChange: function() {
 		this.setState(getScouts());
@@ -27,7 +27,7 @@ var ScoutsList = React.createClass({
 		var that = this;
 		var scouts = this.state.scouts.map(function(scout) {
 			return (
-				<tr  onClick={that.handleClick}>
+				<tr onClick={that.handleClick.bind(null, scout.id)}>
 					<td>{scout.first_name} {scout.last_name}</td>
 					<td>{scout.rank}</td>
 					<td>
