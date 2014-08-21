@@ -6,6 +6,7 @@ var source = require('vinyl-source-stream');
 var reactify = require('reactify');
 var uglify = require('gulp-uglify');
 var connect = require('gulp-connect');
+var webserver = require('gulp-webserver');
 
 gulp.task('browserify', function() {
   var bundler = browserify('./app/js/app.js', {debug: true});
@@ -32,6 +33,11 @@ gulp.task('watch', function() {
   gulp.watch('src/**/*.*', ['default']);
 });
 
-gulp.task('connect', function() {
-  connect.server();
+// gulp.task('connect', function() {
+//   connect.server();
+// });
+
+gulp.task('serve', function() {
+  gulp.src('dist')
+    .pipe(webserver());
 });
