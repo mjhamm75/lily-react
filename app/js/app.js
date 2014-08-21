@@ -26,7 +26,7 @@ var routes = (
 	<Routes>
 		<Route path="/" name="app" handler={App}>
 			<Route path="/scouts" handler={LilyApp} />
-			<Route path="/scout-detail" handler={ScoutDetail} />
+			<Route path="/scouts/:scoutId" handler={ScoutDetail} />
 		</Route>
 	</Routes>
 );

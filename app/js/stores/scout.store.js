@@ -23,6 +23,12 @@ var ScoutStore = merge(EventEmitter.prototype, {
 		});
 		return scouts;
 	},
+	getScoutDetail: function(scoutId) {
+		console.log(scoutId);
+		return {
+			scoutId: scoutId
+		};
+	},
 	addScout: function(scout) {
 		var that = this;
 		$.ajax({

@@ -1,8 +1,16 @@
 /** @jsx React.DOM */
 
 var React = require('react');
+var ScoutStore = require('./../stores/scout.store.js');
+
+function getScoutDetail(scoutId) {
+	return ScoutStore.getScoutDetail(scoutId);
+}
 
 var ScoutsDetail = React.createClass({
+	getInitialState: function() {
+		return getScoutDetail(this.props.params.scoutId);
+	},
 	render: function() {
 		return(
 			<div className="container">
